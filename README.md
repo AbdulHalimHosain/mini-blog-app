@@ -33,7 +33,13 @@ This is a simple blog application built with Laravel where a user can create, re
 docker-compose up --build
 ```
 
-3. **Access the application: Open the browser and go to to http://localhost:8000.**
+3. **Run the command in IDE:**
+
+```bash
+php artisan serve
+```
+
+4. **Access the application: Open the browser and go to to http://localhost:8000.**
 
 ### Without Docker
 1. **Clone the repository:**
