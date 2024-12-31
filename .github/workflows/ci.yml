@@ -17,16 +17,18 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
-          extensions: mbstring, zip, pdo, mysql
+          extensions: mbstring, zip, pdo_mysql, bcmath, xml
           coverage: xdebug
-
-      - name: Install dependencies
-        run: composer install --no-progress --no-suggest
 
       - name: Set up .env file
         run: |
           cp .env.example .env
           php artisan key:generate
+
+      - name: Install dependencies
+        run: |
+          composer diagnose
+          composer install --no-progress --no-suggest
 
       - name: Run migrations
         run: php artisan migrate --force
