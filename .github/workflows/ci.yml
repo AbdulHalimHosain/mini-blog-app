@@ -30,8 +30,10 @@ jobs:
 
       - name: Install dependencies
         run: |
+          composer self-update
           composer diagnose
-          composer install --no-progress --no-suggest
+          composer config --global process-timeout 2000
+          composer install --prefer-dist --no-progress --no-suggest
 
       - name: Set up .env file
         run: |
