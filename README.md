@@ -24,7 +24,7 @@ This is a simple blog application built with Laravel where a user can create, re
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repository-url>
+   git clone <repository-url>
    cd <project-directory>
    ```
 2. **Build and start the Docker containers**:
